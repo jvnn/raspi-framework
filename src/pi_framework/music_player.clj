@@ -1,3 +1,5 @@
+;; (c) Jussi Nieminen, 2014
+
 (ns pi-framework.music-player
   (:require [clojure.core.async :refer [go chan <! >! >!!]])
   (:import [javazoom.jl.player.advanced AdvancedPlayer PlaybackListener PlaybackEvent]))

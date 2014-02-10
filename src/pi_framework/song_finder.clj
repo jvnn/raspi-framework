@@ -1,3 +1,5 @@
+;; (c) Jussi Nieminen, 2014
+
 (ns pi-framework.song-finder
   (:import [java.io File FileFilter]))
 
