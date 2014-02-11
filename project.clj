@@ -5,5 +5,5 @@
                  [javazoom/jlayer "1.0.1"]
                  [net.async/async "0.1.0"]]
   :javac-options ["-target" "1.6" "-source" "1.6" "-Xlint:-options"]
-  :aot [pi-framework.core]
+  :aot :all
   :main pi-framework.core)

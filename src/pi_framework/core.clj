@@ -12,6 +12,7 @@
   (let [ctrl-c-in (control-interface-setup 8989)
         music-c (player-setup (create-song-database music-path))]
     (go
+      (println "Main control loop started")
       (loop []
         (when-let [cmd (<! ctrl-c-in)]
           (println "Command received:" cmd)
@@ -28,5 +29,7 @@
 
 
 (defn -main
-  []
-  (main-control-loop "/home"))
+  [& args]
+  (let [music-dir (first args)]
+    (println "Starting the main control loop for music dir" music-dir)
+    (main-control-loop music-dir)))
